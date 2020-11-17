@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		1815ACFA25564860002A248B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACF925564860002A248B /* AppDelegate.swift */; };
 		1815ACFC25564860002A248B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACFB25564860002A248B /* SceneDelegate.swift */; };
-		1815ACFE25564860002A248B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815ACFD25564860002A248B /* ViewController.swift */; };
 		1815AD0125564860002A248B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1815ACFF25564860002A248B /* Main.storyboard */; };
 		1815AD0325564863002A248B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1815AD0225564863002A248B /* Assets.xcassets */; };
 		1815AD0625564863002A248B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1815AD0425564863002A248B /* LaunchScreen.storyboard */; };
+		1815AD1925564AD7002A248B /* ChartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815AD1825564AD7002A248B /* ChartListViewController.swift */; };
+		1815AD1B25564AE3002A248B /* ChartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815AD1A25564AE3002A248B /* ChartDetailViewController.swift */; };
+		1815AD1D25564AF2002A248B /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815AD1C25564AF2002A248B /* NewsViewController.swift */; };
+		1815AD1F25564AFD002A248B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815AD1E25564AFD002A248B /* SettingViewController.swift */; };
+		1815AD2125565690002A248B /* Chart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1815AD202556568F002A248B /* Chart.storyboard */; };
+		1815AD24255656AB002A248B /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1815AD22255656AB002A248B /* News.storyboard */; };
+		1815AD26255656BC002A248B /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1815AD25255656BC002A248B /* Setting.storyboard */; };
+		18430416255F7946002362E3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18430415255F7946002362E3 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1815ACF625564860002A248B /* CoinFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1815ACF925564860002A248B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1815ACFB25564860002A248B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1815ACFD25564860002A248B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1815AD0025564860002A248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1815AD0225564863002A248B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1815AD0525564863002A248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1815AD0725564863002A248B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1815AD1825564AD7002A248B /* ChartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListViewController.swift; sourceTree = "<group>"; };
+		1815AD1A25564AE3002A248B /* ChartDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDetailViewController.swift; sourceTree = "<group>"; };
+		1815AD1C25564AF2002A248B /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		1815AD1E25564AFD002A248B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1815AD202556568F002A248B /* Chart.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Chart.storyboard; path = CoinFlow/Chart/Chart.storyboard; sourceTree = SOURCE_ROOT; };
+		1815AD23255656AB002A248B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/News.storyboard; sourceTree = "<group>"; };
+		1815AD25255656BC002A248B /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Setting.storyboard; path = CoinFlow/Setting/Setting.storyboard; sourceTree = SOURCE_ROOT; };
+		18430415255F7946002362E3 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		1815ACF825564860002A248B /* CoinFlow */ = {
 			isa = PBXGroup;
 			children = (
+				1843041A255F795F002362E3 /* Extension */,
+				1815AD15255649E1002A248B /* Setting */,
+				1815AD14255649D7002A248B /* News */,
+				1815AD13255649CE002A248B /* Chart */,
 				1815ACF925564860002A248B /* AppDelegate.swift */,
 				1815ACFB25564860002A248B /* SceneDelegate.swift */,
-				1815ACFD25564860002A248B /* ViewController.swift */,
 				1815ACFF25564860002A248B /* Main.storyboard */,
 				1815AD0225564863002A248B /* Assets.xcassets */,
 				1815AD0425564863002A248B /* LaunchScreen.storyboard */,
 				1815AD0725564863002A248B /* Info.plist */,
 			);
 			path = CoinFlow;
+			sourceTree = "<group>";
+		};
+		1815AD13255649CE002A248B /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				1815AD202556568F002A248B /* Chart.storyboard */,
+				1815AD1825564AD7002A248B /* ChartListViewController.swift */,
+				1815AD1A25564AE3002A248B /* ChartDetailViewController.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		1815AD14255649D7002A248B /* News */ = {
+			isa = PBXGroup;
+			children = (
+				1815AD1C25564AF2002A248B /* NewsViewController.swift */,
+				1815AD22255656AB002A248B /* News.storyboard */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		1815AD15255649E1002A248B /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				1815AD1E25564AFD002A248B /* SettingViewController.swift */,
+				1815AD25255656BC002A248B /* Setting.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		1843041A255F795F002362E3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				18430415255F7946002362E3 /* UIColor.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1815AD0625564863002A248B /* LaunchScreen.storyboard in Resources */,
+				1815AD2125565690002A248B /* Chart.storyboard in Resources */,
+				1815AD24255656AB002A248B /* News.storyboard in Resources */,
 				1815AD0325564863002A248B /* Assets.xcassets in Resources */,
 				1815AD0125564860002A248B /* Main.storyboard in Resources */,
+				1815AD26255656BC002A248B /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1815ACFE25564860002A248B /* ViewController.swift in Sources */,
+				1815AD1B25564AE3002A248B /* ChartDetailViewController.swift in Sources */,
+				18430416255F7946002362E3 /* UIColor.swift in Sources */,
+				1815AD1925564AD7002A248B /* ChartListViewController.swift in Sources */,
+				1815AD1D25564AF2002A248B /* NewsViewController.swift in Sources */,
 				1815ACFA25564860002A248B /* AppDelegate.swift in Sources */,
+				1815AD1F25564AFD002A248B /* SettingViewController.swift in Sources */,
 				1815ACFC25564860002A248B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +221,14 @@
 				1815AD0525564863002A248B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1815AD22255656AB002A248B /* News.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1815AD23255656AB002A248B /* Base */,
+			);
+			name = News.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
