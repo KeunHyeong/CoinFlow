@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ify-Ni-CQC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chart-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ChartListViewController" customModule="CoinFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHa-Mn-6Uv">
+                                <rect key="frame" x="0.0" y="176" width="414" height="720"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JUY-mT-ndl">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Ldk-Fb-YY6"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="10" id="msQ-5N-5xR">
+                                            <size key="itemSize" width="350" height="200"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChartCardCell" id="eao-Ue-9ew" customClass="ChartCardCell" customModule="CoinFlow" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="18" width="405" height="164"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bbz-v8-yQr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="405" height="164"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="405" height="164"/>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Ej5-EX-Bsj"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="fFg-fo-8bw"/>
+                                        </connections>
+                                    </collectionView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gGr-Ip-pbj">
+                                        <rect key="frame" x="0.0" y="220" width="414" height="1500"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1500" id="d3m-NF-bVC"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChartListCell" id="wW3-D3-F5m" customClass="ChartListCell" customModule="CoinFlow" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wW3-D3-F5m" id="0Bd-NG-uCd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="h6j-52-o8V"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="qWg-Mt-AHd"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gGr-Ip-pbj" secondAttribute="bottom" id="0vf-bC-exy"/>
+                                    <constraint firstAttribute="trailing" secondItem="JUY-mT-ndl" secondAttribute="trailing" id="5N3-YQ-p8J"/>
+                                    <constraint firstItem="gGr-Ip-pbj" firstAttribute="leading" secondItem="zHa-Mn-6Uv" secondAttribute="leading" id="D8Y-jR-b9E"/>
+                                    <constraint firstItem="JUY-mT-ndl" firstAttribute="leading" secondItem="zHa-Mn-6Uv" secondAttribute="leading" id="Koz-wp-g6Y"/>
+                                    <constraint firstItem="JUY-mT-ndl" firstAttribute="top" secondItem="zHa-Mn-6Uv" secondAttribute="top" id="UGU-qj-AfU"/>
+                                    <constraint firstItem="gGr-Ip-pbj" firstAttribute="top" secondItem="JUY-mT-ndl" secondAttribute="bottom" constant="20" id="V8f-x8-JJY"/>
+                                    <constraint firstAttribute="trailing" secondItem="gGr-Ip-pbj" secondAttribute="trailing" id="ncM-6S-Qc3"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JUY-mT-ndl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="A6k-hh-ucY"/>
+                            <constraint firstItem="zHa-Mn-6Uv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="TBk-2o-x6W"/>
+                            <constraint firstItem="zHa-Mn-6Uv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pHF-OW-OOB"/>
+                            <constraint firstItem="zHa-Mn-6Uv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="s41-jb-PQo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zHa-Mn-6Uv" secondAttribute="trailing" id="v87-G4-9k1"/>
+                            <constraint firstItem="zHa-Mn-6Uv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="yoq-HE-vNF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chart" id="xmG-ef-dxE"/>
+                    <connections>
+                        <outlet property="chartCollectionView" destination="JUY-mT-ndl" id="dn7-EV-Cea"/>
+                        <outlet property="chartTableView" destination="gGr-Ip-pbj" id="Weh-v6-Ox1"/>
+                        <outlet property="chartTableViewHeight" destination="d3m-NF-bVC" id="bv0-nL-2UR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601.44927536231887" y="1541.5178571428571"/>
+        </scene>
+        <!--Chart Detail View Controller-->
+        <scene sceneID="V8f-tG-6Ll">
+            <objects>
+                <viewController storyboardIdentifier="ChartDetailViewController" id="v0p-Jm-hgd" customClass="ChartDetailViewController" customModule="CoinFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fwp-dQ-diD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTa-v8-MLc">
+                                <rect key="frame" x="186" y="438" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GgQ-db-D4k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dmx-Y0-DQT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ElW-ES-Mvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="1542"/>
+        </scene>
+        <!--Chart-->
+        <scene sceneID="ibG-CV-8k2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ify-Ni-CQC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chart" image="chart.bar.fill" catalog="system" id="pvQ-zW-Kkb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="M41-Qq-Pre">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Qp-Ar-cgt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Unq-xC-1k3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601" y="820"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
