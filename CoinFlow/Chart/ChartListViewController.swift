@@ -21,6 +21,26 @@ class ChartListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        NetworkManager.requestCoinList{ result in
+            
+            switch result{
+            
+            case .success(let coins):
+                print("coinList--->\(coins.count)")
+            case .failure(let error):
+                print("error --->\(error.localizedDescription)")
+            }
+        }
+        
+        NetworkManager.requestCoinChartData { result in
+            switch result {
+            case .success(let coinChartDats):
+                print("--> chart data: \(coinChartDats.count)")
+            case .failure(let error):
+                print("--> error: \(error.localizedDescription)")
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

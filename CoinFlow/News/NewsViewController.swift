@@ -15,6 +15,23 @@ class NewsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NetworkManager.requestNewsList{ result in
+            switch result{
+            case .success(let articles):
+                print("coinList--->\(articles.count)")
+            case .failure(let error):
+                print("error ----->\(error.localizedDescription)")
+            }
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
 }
 
 extension NewsViewController:UITableViewDataSource{
